@@ -1,4 +1,4 @@
-# 🌌 Astro Motion Portfolio - Next.js & Firebase Edition
+# 🌌 Template 8 Astro Motion Portfolio - Next.js & Firebase Edition
 
 Website portofolio interaktif dan modern yang diadaptasi dari template **Astro Motion** dengan integrasi **Full-Stack Next.js 15**, **React 19**, **Tailwind CSS v4**, serta **Admin Dashboard (CMS)** berbasis **Firebase Firestore & Authentication**.
 
@@ -192,28 +192,6 @@ npm run dev
 Buka browser dan akses alamat:
 - **Tampilan Website**: [http://localhost:3000](http://localhost:3000)
 - **Dashboard Admin**: [http://localhost:3000/admin](http://localhost:3000/admin) (Login menggunakan email & password admin yang telah didaftarkan di Firebase Authentication).
-
----
-
-### 6. Build untuk Produksi & Deployment
-
-Website ini menggunakan fitur **Static Export** (`output: "export"` pada `next.config.ts`), sehingga menghasilkan file HTML, CSS, dan JS statis di direktori `out/`.
-
-Untuk melakukan build:
-
-```bash
-npm run build
-```
-
-Hasil build berada di folder `out/` dan dapat langsung di-*deploy* ke:
-- **Firebase Hosting**:
-  1. Login ke Firebase CLI: `npx firebase login`
-  2. Inisialisasi/atur proyek: `npx firebase use --add` (pilih Project ID Anda)
-  3. Deploy: `npx firebase deploy --only hosting`
-- **Vercel / Netlify / GitHub Pages**:
-  - Hubungkan repositori GitHub Anda ke Vercel/Netlify.
-  - Masukkan variabel lingkungan dari `.env.example` ke dashboard Vercel/Netlify.
-  - Set build command: `npm run build` dan output directory: `out`.
 
 ---
 

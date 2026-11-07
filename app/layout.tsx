@@ -1,13 +1,20 @@
 import type { Metadata } from "next";
-import { Source_Sans_3 } from "next/font/google";
 import "./globals.css";
 import { ConfigProvider } from "@/lib/ConfigContext";
 
-const sourceSans = Source_Sans_3({
-  subsets: ["latin"],
-  weight: ["300", "400", "600", "700"],
-  variable: "--font-source-sans",
-});
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode
+}) {
+  return (
+    <html lang="en">
+      <body className="font-sans antialiased">
+        {children}
+      </body>
+    </html>
+  )
+}
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://your-portfolio-domain.com";
 
